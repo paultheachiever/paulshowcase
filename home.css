@@ -1,0 +1,30 @@
+#body{
+    padding: 0;
+    margin: 0;
+    border: 0;
+
+}
+.logo{
+
+}
+.description{
+    background-color: green;
+    height: 40%;
+    display: flex;
+    overflow: hidden;
+
+}
+.init{
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    opacity: 0.8;
+    
+}
+
+.footer{
+    background-color: black;
+    height: 30%;
+    width: 100%;
+
+}

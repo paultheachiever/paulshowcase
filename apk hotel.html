@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenpock Point Tayari</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            transition: background 3s ease-in-out;
+            overflow: auto;
+        }
+        .intro{
+            background-image: url('logo3.png');
+        
+        background-size: 100% 100%;
+
+
+        background-repeat: no-repeat;
+            
+        }
+
+        /* Header Section */
+        .combine {
+           
+            padding: 20px;
+            text-align: center;
+            height: 10%;
+            display: flex;
+            flex-wrap: wrap;
+            flex-basis: 33%;
+
+        }
+        .name{
+            color: goldenrod;
+            font-size: 120%;
+            font-family: Castellar;
+        }
+        .logo img{
+            height: 100%;
+            width: 80%;
+            object-fit: cover;
+            position: relative;
+            border-radius: 5%;
+            
+
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            color: goldenrod;
+            height: 5%;
+            text-align: center;
+            place-content: center;
+            font-size: 107%;
+        }
+
+        .navbar ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+            z-index: 1000;
+            position: absolute;
+            align-items: center;
+            text-align: center;
+        }
+
+        .navbar ul li {
+            text-align: center;
+            padding: 10px;
+            align-items: center;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: goldenrod;
+            font-weight: bold;
+        }
+
+        .navbar ul li:hover {
+            background-color: gold;
+            color: white;
+        }
+
+        /* Hamburger Menu */
+        .menu-toggle {
+            display: none;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 20px;
+            border-radius: 40%;
+    z-index: 1100;
+    place-content: left;
+        }
+
+        /* Welcome Section */
+        .pic {
+            padding: 50px;
+            height: auto;
+            min-height: 60vh; 
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+
+            color: antiquewhite;
+
+            background-attachment: fixed;
+            transition: transform 3s ease-in-out;
+                }
+            .pic.active {
+            transform: translateX(0%);
+        }
+        .pic.active {
+            transform: translate(0%);
+        }
+        .pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+    
+
+        button {
+            background: goldenrod;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin: 10px;
+        }
+
+        button a {
+            text-decoration: none;
+            color: white;
+        }
+
+        /* Image & Description Sections */
+        .orders {
+            padding: 20px;
+        }
+
+        #meals {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            padding: 20px;
+            box-shadow: 6px 6px 9px 5px #0c1636;
+        }
+
+        .parts {
+            flex-basis: 45%;
+            text-align: left;
+        }
+
+        .parts img {
+            width: 100%;
+            height: auto;
+            max-height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .rooms{
+            display: flex;
+            overflow: hidden;
+        }
+
+        /* Footer */
+        .footer {
+            background: black;
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .parts h1{
+            text-align: center;
+            font-family: Edwardian Script ITC;
+            font-size: 220%;
+            font-style: normal;
+            font-weight: bolder;
+            color: goldenrod;
+        }
+        .more_services{
+            height: 40%;
+            display: flex;
+            font-size: smaller;
+            justify-content: space-between;
+            text-align: center;
+            padding: 10px;
+        }
+        .exp{
+            text-align: center;
+            font-family: Edwardian Script ITC;
+            font-size: 220%;
+            font-style: normal;
+            font-weight: bolder;
+            color: goldenrod;
+        }
+        .init{
+            align-items: center;
+            text-align: center;
+        }
+        .show{
+            justify-content: space-around;
+            padding: 15px;
+        }
+        .show img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.contact{
+    text-align: end;
+    color: white;
+}
+
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            .navbar ul {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background: black;
+                position: absolute;
+                left: 0;
+                top: 50px;
+                padding: 10px 0;
+                text-align: center;
+                opacity: 0;
+        visibility: hidden;
+        transform: translateY(-20px);
+        transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+            }
+            .exp{
+            text-align: center;
+            font-family: Edwardian Script ITC;
+            font-size: 220%;
+            font-style: normal;
+            font-weight: bolder;
+            color: goldenrod;
+        }
+
+            .navbar ul.show {
+                display: flex;
+                opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+            }
+            .name{
+            color: goldenrod;
+            font-size: 120%;
+            font-family: Castellar;
+        }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            #meals {
+                flex-direction: column;
+            }
+
+            .parts {
+                flex-basis: 100%;
+                text-align: center;
+                color: aquamarine;
+            }
+            .logo img{
+            height: 100%;
+            width: 80%;
+            object-fit: cover;
+            position: relative;
+            border-radius: 5%;
+            
+
+        }
+            .rooms{
+                flex-direction: column;
+        }
+        .combine{
+                flex-direction: column;
+                align-items: center;
+        }
+
+            .footer {
+                flex-direction: column;
+                text-align: center;
+            }
+            .more_services{
+            flex-direction: column;
+        }
+        }
+        .links a{
+            text-decoration: none;
+            color: azure;
+        }
+        
+    </style>
+</head>
+<body>
+   
+    <div class="intro">
+        <div class="combine">
+    
+            <div class="name"><h1><b>APK HOTELS AND RESORT</b></h1></div>
+            <div class="logo">
+                <img src="logo2.png">
+            </div>
+            <div class="contact"> +254113795338 | info@APKhotel.com
+                <br><button id="confirmations" type="button">Reservations status</button>
+            </div>
+        
+            
+        </div>
+        <div>
+        
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+            <div class="menu-toggle">☰</div>
+            <ul class="nav-links">
+                <li><a href="apk hotel.html">Home</a></li>
+                <li><a href="booking_page.html">Hotel Booking</a></li>
+                <li><a href="#about_us">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="booking_page.html">Make Reservations</a></li>
+            </ul>
+        </nav></div>
+       
+    
+</div>
+
+    <!-- Welcome Section -->
+    <div class="pic">
+
+        
+
+    <!-- Header Section -->
+    
+
+        <h1>Welcome to APK HOTEL AND RESORT <br><i>where dreams meets reality</i></h1>
+        <p>Discover luxury, comfort, and exceptional hospitality</p>
+        <button><a href="booking_page.html">Make reservations</a></button>
+        <button><a href="">Book for vacations</a></button>
+    </div>
+
+    <div class="about_us">
+        <div id="meals">
+            <div class="parts">
+                <h1 >about us</h1><br>
+                Nestled in the heart of indian ocean shores, APK HOTEL AND RESORT
+                offers a luxurious and unforgettable experience for travelers seeking comfort,
+                 elegance, and exceptional hospitality. Whether you're visiting for business or leisure,
+                  our hotel is designed to provide the perfect balance of relaxation and sophistication.
+<h1>our story</h1><br>
+
+Established in 2010, APK HOTELS AND RESORT has built a reputation for excellence in hospitality. 
+Our mission is to create a warm and welcoming environment where guests feel valued and at home.
+            </div>
+            <div class="parts">
+                 
+            </div>
+        </div>
+        
+
+    </div>
+    <div class="exp"><h2>Adventures we offer you</h2></div>
+
+    <!-- Attractions Section -->
+    <div class="orders">
+        <div id="meals">
+            <div class="parts">
+                <img src="swimming.png" alt="Swimming Pool">
+            </div>
+            <div class="parts">
+                <h3><b>Swimming Pools & Relaxation</b></h3>
+                <p>Enjoy luxurious pools, cocktails, and relaxation areas.</p>
+            </div>
+        </div>
+
+        <div id="meals">
+            <div class="parts">
+                <img src="tourists.png" alt="Tourists Experience">
+            </div>
+            <div class="parts">
+                <h3><b>Tourists Experience</b></h3>
+                <p>Join guided tours and explore breathtaking attractions.</p>
+            </div>
+        </div>
+
+        <div id="meals">
+            <div class="parts">
+                <img src="falls.png" alt="Waterfalls">
+            </div>
+            <div class="parts">
+                <h3><b>Natural Adventures</b></h3>
+                <p>Explore scenic waterfalls and lush landscapes.</p>
+            </div>
+        </div>
+
+        <div id="meals">
+            <div class="parts">
+                <img src="animals.png" alt="Wildlife Adventures">
+            </div>
+            <div class="parts">
+                <h3><b>Wildlife Adventures</b></h3>
+                <p>Experience safaris and witness majestic animals up close.</p>
+            </div>
+        </div>
+    </div>
+    <div class="exp"><h2>Rooms & suites</h2></div>
+
+    <div class="rooms">
+
+        <div class="show">
+            <img src="room1.png">
+
+
+        </div>
+        <div class="show">
+            <img src="room2.png">
+
+
+        </div>
+        <div class="show">
+            <img src="room3.png">
+
+
+        </div>
+        <div class="show">
+            <img src="room4.png">
+
+
+        </div>
+        
+        
+
+    </div>
+    <div class="exp"><h2>Extra services</h2></div>
+    <div class="more_services">
+       
+       <div class="init">
+        <img src="parking.png">
+        <br>
+        <h3>please consider your private parking space or even better</h3>
+
+    </div>
+    <div>
+        <img src="drink.png">
+        <br>
+        <h3>Lets add energy to help you start the day</h3>
+
+    </div>
+    <div>
+        <img src="plane.png">
+        <br>
+        <h3>We pick you from the airport as you enjoy the comfy on your ride</h3>
+
+    </div>
+    <div>
+        <img src="keys.png">
+        <br>
+        <h3>you need some privacy we've got you covered we offer you private entrance to satisfy your needs</h3>
+
+    </div>
+    
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer">
+        <div class="logo">
+            <img src="logo2.png">
+        </div>
+        <div>
+            <h3>Contact Us</h3>
+            <p>Email: info@APKhotel.com</p>
+            <p>Phone: +354115995080</p>
+        </div>
+        <div>
+            <h3>Follow Us</h3>
+            <p>Facebook | Twitter | Instagram</p>
+        </div><div class="links">
+            <h3><u>links</u></h3>
+            <br>
+            
+            <p><a href="apk hotel.html">Home</a></p>
+            <p><a href="booking_page.html">Hotel Booking</a></p>
+            <p><a href="#about_us">About us</a></p>
+            <p><a href="contact.html">contact us</a></p>
+            <p><a href="booking_page.html">Make reservations</a></p>
+
+
+            
+        </div>
+    </div>
+    <div class="end">
+        
+    </div>
+
+    <dialog id="phoneDialog">
+        <h1>Thank you for choosing APK HOTELS <br><i>where dreams mets reality</i></h1>
+        To proceed ::
+        Enter phone number used to register
+                <input type="text" id="phoneInput" placeholder="Enter phone number">
+        <button id="confirmPhone">Confirm</button>
+        <button id="closePhoneDialog">Cancel</button>
+    </dialog>
+
+    <!-- Reservation Details Dialog -->
+    <dialog id="reservationDialog">
+        <h3>Your Reservation Details</h3>
+        <div id="reservationData">Loading...</div>
+        <button id="closeReservationDialog">Close</button>
+    </dialog>
+    
+    <!-- JavaScript for Menu Toggle -->
+    <script>
+        document.querySelector(".menu-toggle").addEventListener("click", function() {
+            document.querySelector(".nav-links").classList.toggle("show");
+        });
+    const images = [
+    'pic3.png',
+    'pic4.png',
+    'pic5.png',
+    'pic6.png',
+
+    ];
+    let index = 0;
+    const pic = document.querySelector('.pic');
+function changebg(){
+    pic.style.backgroundImage =     `url(${images[index]})`;
+    pic.classList.add('active');
+
+    setTimeout(() =>{
+        pic.style.backgroundImage =     `url(${images[index]})`;
+        pic.classList.remove('active');
+
+         index = (index + 1) % images.length;
+
+    },3000);
+
+
+}
+setInterval(changebg,5000);
+changebg()
+
+
+const phoneDialog = document.getElementById("phoneDialog");
+        const reservationDialog = document.getElementById("reservationDialog");
+
+        // Open phone input dialog
+        document.getElementById("confirmations").addEventListener("click", () => {
+            phoneDialog.showModal();
+        });
+
+        // Close phone input dialog
+        document.getElementById("closePhoneDialog").addEventListener("click", () => {
+            phoneDialog.close();
+        });
+
+        // Handle phone number confirmation
+        document.getElementById("confirmPhone").addEventListener("click", () => {
+            const phoneNumber = document.getElementById("phoneInput").value;
+            if (phoneNumber.trim() === "") {
+                alert("Please enter a phone number.");
+                return;
+            }
+
+            // Fetch reservation data based on phone number
+            fetch("fetch_reservation.php?PHONE=" + encodeURIComponent(phoneNumber))
+                .then(response => response.json())
+                .then(data => {
+                    if (data.error) {
+                        alert("No reservation found for this phone number.");
+                    } else {
+                        let output = `
+                            <p><b>Full Name:</b> ${data.NAME}</p>
+                            <p><b>Phone:</b> ${data.PHONE}</p>
+                            <p><b>Email:</b> ${data.EMAIL}</p>
+                            <p><b>Check-in Date:</b> ${data.DATEIN}</p>
+                            <p><b>Check-out Date:</b> ${data.DATEOUT}</p>
+                            <p><b>Guests:</b> ${data.GUESTS}members</p>
+                            <p><b>Rooms booked:</b> ${data.ROOMS}rooms</p>
+                        `;
+                        document.getElementById("reservationData").innerHTML = output;
+                        reservationDialog.showModal();
+                        console.log("fetching data");
+                    }
+                })
+                .catch(error => {
+                    alert("Error fetching reservation details.");
+                    console.error(error);
+                });
+
+            phoneDialog.close();
+        });
+
+        // Close reservation details dialog
+        document.getElementById("closeReservationDialog").addEventListener("click", () => {
+            reservationDialog.close();
+        });
+
+    </script>
+
+</body>
+</html>

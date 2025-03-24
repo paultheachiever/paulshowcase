@@ -1,0 +1,31 @@
+.main{
+    height: 100%;
+    width: 100%;
+background-color: aqua;    align-items: center;
+}
+.navbar{
+    display: flex;
+    background-color: gold;
+
+}
+.navbar ul li{
+    text-align: center;
+    background: none;
+    color: goldenrod;
+}
+.navbar ul li:hover{
+    background-color: gold;
+    color: azure;
+
+}
+.pic{
+    height: 40%;
+    width: 100%;
+    background-image: ;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 0;
+    margin: 0;
+
+}

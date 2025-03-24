@@ -1,0 +1,240 @@
+<html>
+    <style>
+        .body{
+            margin: 30px;
+            padding: 100px;
+            
+        
+        }
+        .head{
+            height: 30%;
+            background-image: url('head.png');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+
+
+        }
+        .fill{
+            height: 60%;
+            background-image: url('pic6.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            text-align: center;
+            align-items: center;
+            position: relative;
+            justify-content: center;
+
+        }
+        .links a{
+            color: white;
+        }
+        .fill h1{
+            font-family: broadway;
+            font-size: 400%;
+            font-style: normal;
+            font: bolder;
+            color: white;
+            
+        }
+        .fill background{
+            opacity: 0.3;
+        }
+        .menu-toggle {
+            display: none;
+            background: rgba(63, 60, 51, 0);
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 20px;
+            border-radius: 40%;
+            position: relative;
+    z-index: 1100;
+        }
+        .parts{
+            background: rgb(153, 95, 95);
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .contact{
+            align-items: center;
+            background-position: center;
+            background-size: auto;
+            color: azure;
+        }
+        @media screen and (max-width: 768px) {
+            .navbar ul {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background: black;
+                position: absolute;
+                left: 0;
+                top: 50px;
+                padding: 10px 0;
+                text-align: center;
+                opacity: 0;
+        visibility: hidden;
+        transform: translateY(-20px);
+        transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+            }
+
+            .navbar ul.show {
+                display: flex;
+                opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+            .parts {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            
+
+            
+
+            .footer {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: black;
+            padding: 10px 20px;
+            color: goldenrod;
+        }
+
+        .navbar ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+            z-index: 1000;
+            position: absolute;
+            align-items: center;
+        }
+
+        .navbar ul li {
+            text-align: center;
+            padding: 10px;
+            size: 20;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: goldenrod;
+            font-weight: bold;
+        }
+
+        .navbar ul li:hover {
+            background-color: gold;
+            color: white;
+        }
+
+        /* Hamburger Menu */
+       
+        .footer {
+            background: black;
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .links{
+            color: white;
+        }
+        #map{
+            height: 40%;
+        }
+        .talk{
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+    </style>
+    <body>
+        <div class="head">
+
+        </div>
+        <nav class="navbar">
+            <div class="menu-toggle">☰></div>
+            <ul class="nav-links">
+                <li><a href="apk hotel.html">Home</a></li>
+                <li><a href="#">Hotel Booking</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#links">Contact Us</a></li>
+                <li><a href="main.html">Make Reservations</a></li>
+            </ul>
+        </nav>
+        <div class="fill"><center><h1>CONTACT US</h1>
+            
+
+            </center></div>
+               <div class="parts">
+                <div class="talk">
+                    <br>
+                    <h2>reach us out for asistance
+                    </h2>
+                </div><div>
+                    <br>
+                    <h1>PHONE</h1><br>
+                    +254113795338
+                </div><div>
+                    <br>
+<h1>ADDRESS</h1><br>
+y-114 0022345-12423
+
+                </div><div>
+                    <br>
+                    <h1>EMAIL</h1>
+<br>
+info@robinson hotel.com
+                </div>
+        </div><div class="footer">
+            <div>
+                <h3>Contact Us</h3>
+                <p>Email: info@robinsonshotel.com</p>
+                <p>Phone: +354115995080</p>
+            </div>
+            <div>
+                <h3>Follow Us</h3>
+                <p>Facebook | Twitter | Instagram</p>
+            </div><div class="links">
+                <h3><u>links</u></h3>
+                <br>
+                
+                <p><a href="apk hotel.html">Home</a></p>
+                <p><a href="booking_page.html">Hotel Booking</a></p>
+                <p><a href="#about_us">About us</a></p>
+                <p><a href="contact.html">contact us</a></p>
+                <p><a href="booking_page.html">Make reservations</a></p>
+    
+    
+                
+            </div>
+        </div>
+        <div class="end">
+            
+        </div>
+
+        <script>
+            document.querySelector(".menu-toggle").addEventListener("click", function() {
+            document.querySelector(".nav-links").classList.toggle("show");
+        });
+    
+       
+    </script>
+        </script>
+    </body>
+</html>

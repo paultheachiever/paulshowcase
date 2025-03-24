@@ -1,0 +1,30 @@
+<html>
+    <head>unit details</head>
+    <style>
+
+    </style>
+    <body>
+        <fieldset>
+            <legend>UNIT DETAILS</legend>
+
+            if($result){
+                if($result->num_row >0){
+                    (assuming UNITCODE is unique)
+                    $row =$result->fetch_assoc();
+                    echo'<table>';
+                        echo'<tr><th>UNITCODE</th><th>UNITNAME</th></tr>'
+                    echo '</table>'}
+
+                    else{
+                        echo '<p>found no results</p>';
+
+                
+                    }
+
+                }
+            }
+       echo' </fieldset>
+    </body>
+    </html>'
+    $con->close();
+    ?>
